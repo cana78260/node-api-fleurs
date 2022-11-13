@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "9f4e6467-1334-45ac-9d0c-5831b90af0f0",
+		"name": "Api-node-plantes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AllPlantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/plantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OnePlanteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/plantes/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plantes",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPlante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"plante23\",\r\n  \"unitprice_ati\": 12,\r\n  \"quantity\": 6,\r\n  \"category\": \"orchides\",\r\n  \"rating\": 2,\r\n  \"url_picture\": \"breuar.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/plantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One plante by Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n   \"name\": \"plante23\",\r\n  \"unitprice_ati\": 12,\r\n  \"quantity\": 6,\r\n  \"category\": \"orchides\",\r\n  \"rating\": 2,\r\n  \"url_picture\": \"breuar.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/plantes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plantes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One plante",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"plante23\",\r\n  \"unitprice_ati\": 12,\r\n  \"quantity\": 6,\r\n  \"category\": \"orchides\",\r\n  \"rating\": 2,\r\n  \"url_picture\": \"breuar.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/plantes/33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"plantes",
+						"33"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

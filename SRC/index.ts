@@ -3,6 +3,7 @@ import cors from "cors";
 import planteRoute from "./ROUTES/RoutesPlantes";
 import { AppDataSource } from "./data-source";
 import path = require("path");
+import connectRoute from "./ROUTES/RoutesConnect"
 
 
 AppDataSource.initialize().then(async () =>{
@@ -16,6 +17,8 @@ app.use(
 );
 
 app.use("/api/plantes", planteRoute);
+app.use("/api/connect", connectRoute);
+
 
 app.use("/assets", express.static(path.join(__dirname, "../public/assets")));
 

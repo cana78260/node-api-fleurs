@@ -1,5 +1,6 @@
 import { Router } from "express";
 import ConnectControll from "../CONTROLLER/ControllConnect";
+//import { authentificateToken}
 
 const connectRoute = Router();
 const connectControll = new ConnectControll;
@@ -10,6 +11,10 @@ connectControll.getId(req, res);
 
 connectRoute.post("/", (req, res) => {
 connectControll.postId(req, res);
+});
+
+connectRoute.post("/login",/*authentificateToken,*/ (req, res) => {
+    connectControll.logId(req, res);
 });
 
 

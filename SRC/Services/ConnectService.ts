@@ -1,6 +1,9 @@
 import { AppDataSource } from "../data-source";
-import bcrypt from 'bcrypt';
-import { Db } from "typeorm";
+import User from "../models/interface/ConnectUserInterface";
+
+
+
+
 
 
 // module.exports = {
@@ -9,9 +12,13 @@ import { Db } from "typeorm";
 // async function getBddId() {
 
 // }
+// hasher le mdp avant de l'envoyer dans la bdd
+//salt = 10, combien de fois sera exécuté l'algo de hashage
 
-// const user = new Db.User(params) 
+// Ce qui va être enregistré dans la bdd
 
+
+//envoyer le user dans la bdd
 
 class ConnectService {
 
@@ -20,6 +27,16 @@ getAllId(): Promise<void> {
     return AppDataSource.query(`select * from user_connect`)
 }
 
+postId(user:User): Promise<void> {
+  return AppDataSource.query(`insert into user_connect(email, userpassword) values('${user.email}', '${user.userpassword}')`)
+}
+
+logId(user: User): Promise<User[]>{
+  return AppDataSource.query(`select * from user_connect  where user_connect.email = '${user.email}'`)
+}
+// logId(user:User): Promise<void> {
+// return AppDataSource.query()
+// }
 }
 
 export default ConnectService;
